@@ -1,0 +1,116 @@
+body {
+  font-size: 3vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+.window {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  width: 50vw;
+  height: 70vh;
+  top: 10vh;
+  background-color: #619bb9;
+  background: -webkit-gradient(linear, center top, center bottom, from(#989898), color-stop(45%, #585858), to(#dddddd));
+  border: 1px solid #041627;
+  box-shadow: inset 1px 1px rgba(219, 229, 240, 0.8),
+              inset -1px -1px rgba(219, 229, 240, 0.8),
+              0 0 20px black;
+}
+
+.buttons {
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+
+.min, .close {
+  display: inline-block;
+}
+
+.min:hover, .close:hover {
+  cursor: default;
+}
+
+/* open */
+
+.min-extra {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  display: inline-block;
+  padding: 0 0px;
+  margin: 0px;
+}
+.min-text {
+  font-size: 1.5em;
+  background: -webkit-linear-gradient(top, #b5c8dd 0%, #8ca6c3 49%, #52769f 50%, #7da4d6 100%);
+  letter-spacing: -0.050em;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.min-text:after {
+  color: cyan;
+  content: attr(data-text);
+  position: absolute;
+  -webkit-text-stroke: 4px rgba(83, 99, 116, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.min-text:hover {
+  background: -webkit-linear-gradient(#b4d5ef 0%, #76a9d1 49%, #0a619f 50%, #31cde2 100%);
+  -webkit-background-clip: text;
+}
+.min-text:hover:after {
+  text-shadow: -1px 1px 0 rgba(83, 99, 116, 0.7),
+               -3px -3px 10px cyan,
+               3px 3px 10px cyan;
+}
+
+/* close */
+
+.close-text {
+  font-size: 1.5em;
+  background: -webkit-linear-gradient(top, #d1a2a3 0%, #c1736e 49%, #b33c2e 50%, #cea6a5 100%);
+  letter-spacing: -0.050em;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 120%;
+  position: relative;
+  display: inline-block;
+  padding: 0 0px;
+  margin: 0px;
+}
+.close-text:after {
+  color: red;
+  content: attr(data-text);
+  position: absolute;
+  -webkit-text-stroke: 4px rgba(118, 29, 16, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.close-text:hover {
+  background: -webkit-linear-gradient(#f89c8c 0%, #e86c57 49%, #aa210c 50%, #e6942f 100%);
+  -webkit-background-clip: text;
+}
+.close-text:hover:after {
+  text-shadow: -1px 1px 0 rgba(118, 29, 16, 0.5),
+               1px 0 0 rgba(118, 29, 16, 0.7),
+               0 0 10px red,
+               -3px -3px 10px rgba(255, 0, 0, 0.3),
+               3px 3px 10px rgba(255, 0, 0, 0.3);
+}
+
